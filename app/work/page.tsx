@@ -18,7 +18,7 @@ export default function Work() {
   return (
     <div className="relative w-full min-h-screen">
       <Image
-        src="/colin_street.png"
+        src="/contact_background.png"
         alt=""
         fill
         priority
