@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import Link from "next/link"
 
 const RADIUS = 88
@@ -77,22 +78,17 @@ export function RadialNav() {
           aria-label={open ? "Close menu" : "Open menu"}
           className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full border border-white/40 text-white hover:border-white/70 hover:bg-white/10 transition-colors duration-200"
         >
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.75"
-            strokeLinecap="round"
+          <Image
+            src="/slurpee.png"
+            alt="Menu"
+            width={36}
+            height={36}
+            className="rounded-full object-cover"
             style={{
               transition: "transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1)",
               transform: open ? "rotate(45deg)" : "rotate(0deg)",
             }}
-          >
-            <line x1="12" y1="5" x2="12" y2="19" />
-            <line x1="5" y1="12" x2="19" y2="12" />
-          </svg>
+          />
         </button>
       </div>
     </div>
